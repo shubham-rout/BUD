@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>
+    BUD
+  </title>
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <link href="assets/css/events.css" rel="stylesheet" />
+</head>
+
+<body class="index-page">
+<main>
+
+<!-- header -->
+
+  <div class="header">
+    <div class="logo">
+	<a href="index.html">
+    <img src="assets/images/logo.png" alt="logo" /> </a>
+	  <a href="index.html">
+      <h1>BUD</h1>
+      </a>
+	</div>
+    <ul>
+     <li><a href="#voiceSearch">Voice search</a></li>
+	 <li><a href="#voiceToText">Speech to text</a></li>
+	 <li><a href="#abouts" onclick=popshow()>About</a></li>
+    </ul>
+  </div>
+
+<!-- content -->
+ 
+  <section id ="voiceSearch">
+	<div class="instructions" id="searchContainer">
+	 <h1 id="heading">Voice Search</h1>
+	 <p>Typeless searching was never so easy.<br>
+	    Use Earphones for better performance.</p>
+	 <button id="go" onclick=search()>Go</button>
+	</div>
+    <div id="search">
+	 <p>Please click on the microphone to start</p>
+	  <iframe src=""" id="searchWindow"></iframe>
+	  <div id ="search-controls">
+	   <button><i class="fas fa-microphone"id="searchIcon" onclick=start(2)></i></button>
+	   <button id="search-exit" onclick=searchexit()>&times;</button>
+	</div>
+  </section>
+  
+   <section id ="voiceToText">
+	<div class="instructions" id="textConversion">
+	 <h1 id="heading">Speech to text</h1>
+	 <p>No need to type, Just speak and I'll make it text.</p>
+	 <button id="go" onclick=text()>Go</button>
+	</div>
+    <div id="text">
+	 <div id="textArea">
+	  <p id="convertedText"></p>
+	  </div>
+	  <div class="Textinstructions" id="Text-instructions">
+	   <p>Point:Simple and framed speech with pauses<br>
+	    would be best for use.</p>
+	   </div>
+	  <div id="textControlls">
+	   <button id="start" onclick=start(1)>Start</button>
+	   <button id="stop" onclick=rec.stop()>Stop</button>
+	   <button id="clear" onclick=erase()>Clear</button>
+	   <button id="exit" onclick=textexit()>Exit</button>
+	  </div>
+	</div>
+  </section>
+  </main>
+  <section id="pop">
+    <h1>Speech Recognition</h1>
+    <p>Why to waste your time typing, when you have your assistant to make your life easier.<br>
+	At present it has the following features.<p>
+    <ol>
+	 <li><b>voice Search:</b> This helps you for searching without typing.</li>
+     <li><b>Speech to text:</b> This converts whatever you speak in the form of text.</li>
+	 </ol>
+    <button onclick=pophide()>Got it</button>
+  </section>
+   <section id="error">
+    <h1>Error!</h1>
+     <p id="error-mssg">please check your network connection and try again.<p>
+	 <p id="error-suggestion"><p>
+     <button onclick=errorhide()>Got it</button>
+  </section>
+  <section id="loading">
+    <div id="bar1"></div>
+    <div id="bar2"></div>
+    <div id="bar3"></div>
+	<div id="bar4"></div>
+	<div id="bar5"></div>
+	<div id="bar6"></div>
+	<div id="bar7"></div>
+	<div id="bar8"></div>
+  </section>
+  <img src="assets/images/Listening.gif" id="listening">
+  <script src="app.js"></script>
+ 
+<!-- footer -->
+ 
+ <footer>
+  <div class="contatos">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="logo" />
+        <h1>BUD<br>Voice Based Platform</h1>
+      </div>
+      <div class="redes-sociais">
+        <h3>Socials</h3>
+        <div class="redes">
+          <a href="https://www.facebook.com/profile.php?id=100009292660973" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com/_shubhmm__/" target="_blank"><i class="fab fa-instagram"></i></a>
+		  </div>
+      </div>
+  </div>
+  <div class="credito" id="abouts">
+    <h4>Designed by <a href="https://www.linkedin.com/in/shubham-rout-9b0193182" target="_blank"> Shubham</a></h4>
+  </div>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+  </footer>
+ 
+ <script type="text/javascript" src="app.js"></script>
+</body>
+<script src="https://kit.fontawesome.com/3975e2dbb7.js" crossorigin="anonymous"></script>
+</html>
